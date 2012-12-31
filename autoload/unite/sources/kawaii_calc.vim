@@ -40,7 +40,12 @@ function! s:expline(expr)
   if empty(a:expr)
     return ''
   else
-    return a:expr . ' = ' . s:calc(a:expr)
+    try
+      let l:result = ' = ' . s:calc(a:expr)
+    catch
+      let l:result = ''
+    endtry
+    return a:expr . l:result
   endif
 endfunction
 
