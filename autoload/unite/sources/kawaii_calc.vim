@@ -36,8 +36,8 @@ function! s:calc(str)
 endfunction
 
 " 計算式と答えを返す
-function! s:expline(exp)
-  return a:exp
+function! s:expline(expr)
+  return a:expr
   " return a:exp . ' = ' . s:calc(a:exp)
 endfunction
 
