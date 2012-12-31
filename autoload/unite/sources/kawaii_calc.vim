@@ -32,12 +32,12 @@ let s:source = {"name" : "kawaii-calc"}
 
 " 計算式の答えを返す
 function! s:calc(str)
-  return eval(str)
+  return eval(a:str)
 endfunction
 
 " 計算式と答えを返す
 function! s:line(exp)
-  return exp . ' = ' . s:calc(a:exp)
+  return a:exp . ' = ' . s:calc(a:exp)
 endfunction
 
 " kawaii-calc
