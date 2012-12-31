@@ -36,7 +36,7 @@ function! s:calc(str)
 endfunction
 
 " 計算式と答えを返す
-function! s:line(exp)
+function! s:expline(exp)
   return a:exp
   " return a:exp . ' = ' . s:calc(a:exp)
 endfunction
@@ -44,7 +44,7 @@ endfunction
 " kawaii-calc
 function! s:source.change_candidates(args, context)
   let list = [{
-        \"word" : s:line(a:context.input)
+        \"word" : s:expline(a:context.input)
         \"kind" : "word"
         \}]
   return list 
