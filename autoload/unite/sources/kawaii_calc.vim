@@ -37,8 +37,7 @@ endfunction
 
 " 計算式と答えを返す
 function! s:expline(expr)
-  return a:expr
-  " return a:exp . ' = ' . s:calc(a:exp)
+  return a:expr . ' = ' . s:calc(a:expr)
 endfunction
 
 " kawaii-calc
